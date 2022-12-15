@@ -16,7 +16,7 @@ public class Main {
    {
     counts.lowCount++;
    }
-   else if(cycles[i]>=310 && cycles[i]<929)
+   else if(cycles[i]>=310 && cycles[i]<=929)
    {
     counts.mediumCount++;
    }
