@@ -10,20 +10,25 @@ public class Main {
  static CountsByUsage countBatteriesByUsage(int[] cycles) {
    CountsByUsage counts = new CountsByUsage();
  for(int i=0;i<cycles.length;i++)
-    {
-        if(cycles[i]<310)
-        {
-         counts.lowCount++;
-        }
-        else if(cycles[i]>=310 && cycles[i]<=929)
-        {
-         counts.mediumCount++;
-        }
-        else
-        {
-         counts.highCount++;
-        }
+{
+
+   if(cycles[i]<310)
+   {
+    counts.lowCount++;
    }
+   else if(cycles[i]>=310 && cycles[i]<929)
+   {
+    counts.mediumCount++;
+   }
+   else {
+    counts.highCount++;
+   }
+   
+   }
+ System.out.println(counts.highCount);
+ System.out.println(counts.mediumCount);
+ System.out.println(counts.lowCount);
+ 
    return counts;
  }
 
@@ -38,7 +43,6 @@ public class Main {
 
  public static void main(String[] args) {
  testBucketingByNumberOfCycles();
-   countBatteriesByUsage(new int[] {100, 300, 500, 600, 900, 1000});
- 
+   
  }
 }
